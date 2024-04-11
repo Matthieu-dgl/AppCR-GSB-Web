@@ -17,6 +17,6 @@
         </h3>
 
     </div>
-    <a class="TextConsult" href="index.php?page=ModifConsultation">Modifier mes informations</a>
+    <a class="TextConsult" href="Index.php?page=ModifConsultation">Modifier mes informations</a>
 
 </div>

@@ -11,7 +11,7 @@
     padding: 1vw;
     margin-top: 5vw;
     margin-left: 30vw;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
     color: #052550;
     background-color: #E9CBB1;
     border-radius: 10px;
@@ -27,17 +27,17 @@
 
 .FormMail {
     margin-top: 5vw;
+    margin-left: 10vw;
 }
 
 .FormMail label {
-    font-family: "Helvetica Neue";
+    font-family: Lato;
     color: #052550;
 }
 
 .FormMail input {
     height: 3vw;
     width: 20vw;
-    margin-top: 2vw;
     border: 1px solid #052550;
     background-color: #EDE8E4;
 }
@@ -47,6 +47,15 @@
     color: #052550;
 }
 
+.FormMail select {
+    height: 3vw;
+    width: 21vw;
+    background-color: #EDE8E4;
+    appearance: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
 .FormMail button {
     margin-top: 1vw;
     background-color: #E9CBB1;
@@ -54,19 +63,61 @@
     border-radius: 10px;
     padding: 1vw;
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-size: 1rem;
+    font-family: Lato;
+    font-weight: bold;
     cursor: pointer;
 }
 
-.FormMail select {
-    margin-top: 2vw;
-}
 
 .FormMail textarea {
-    height: 3vw;
-    width: 20vw;
-    margin-top: 2vw;
+    height: 5vw;
+    width: 40vw;
     border: 1px solid #052550;
     background-color: #EDE8E4;
 }
 
+
+/* ----------------------- */
+
+.labelStats {
+    margin-left: 5vw;
+    font-family: Lato;
+    color: #052550;
+}
+
+#annee {
+    height: 3vw;
+    width: 21vw;
+    background-color: #EDE8E4;
+    appearance: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+#NomEchantillon {
+    height: 3vw;
+    width: 21vw;
+    background-color: #EDE8E4;
+    appearance: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.ButtonStats {
+    margin-left: 5vw;
+    background-color: #E9CBB1;
+    border: none;
+    border-radius: 10px;
+    padding: 1vw;
+    color: #052550;
+    font-size: 1rem;
+    font-family: Lato;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#echantillonChart2 {
+    margin-top: 5vw;
+    margin-left: 5vw;
+}

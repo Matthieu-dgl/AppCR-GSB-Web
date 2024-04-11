@@ -4,7 +4,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <form method="post" action="">
-        <label for="annee">Année :</label>
+        <b><label class="labelStats" for="annee">Année</label></b>
         <select id="annee" name="annee">
             <?php foreach ($years as $year) : ?>
                 <option value="<?= $year['annee'] ?>"><?= $year['annee'] ?></option>
@@ -12,17 +12,17 @@
             <option value="autre">-------</option>
         </select>
 
-        <label for="echantillons">Échantillons :</label>
+        <b><label class="labelStats" for="echantillons">Échantillons</label></b>
         <select id="NomEchantillon" name="echantillons">
             <?php foreach ($echantillons as $row) : ?>
                 <option value="<?= $row['id_echantillon'] ?>"><?= $row['nom'] ?></option>
             <?php endforeach; ?>
             <option value="autre">-------</option>
         </select>
-        <button type="submit" name='button'>Exécuter</button>
+        <button class="ButtonStats" type="submit" name='button'>Rechercher</button>
     </form>
 
-    <canvas id="echantillonChart2" width="300" height="150"></canvas>
+    <canvas id="echantillonChart2" width="500" height="250"></canvas>
 
     <script>
         var ctx = document.getElementById('echantillonChart2').getContext('2d');
@@ -46,7 +46,7 @@
                         beginAtZero: true
                     }
                 }
-            }
+            }  
         });
     </script>
 </div>

@@ -1,45 +1,48 @@
 <?php
 header("Content-Type:application/json");
-function checkUserIdOrToken($userId, $token){
-    if (!$userId || !$token) {
-        throw new Exception("User ID or token not provided", 400);
-        return false;
-    } else {
-        return true;
-    }
+
+try {
+    $bdd = new PDO('mysql:host=db5015545528.hosting-data.io;dbname=dbs12698422;charset=utf8;', 'dbu351328', 'BleuBlancRouge3009!.', array(PDO::ATTR_PERSISTENT => true));
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die($e);
 }
 
-function checkTimeStamp($bdd, $userId, $token){
+$userId = intval($_POST['id']);
+$token = $_POST['Token'];
+
+
+if (!$userId || !$token) {
+    throw new Exception("User ID or token not provided", 400);
+} else {
+
     try {
+
         $tokenQuery = $bdd->prepare("SELECT TimeStamp FROM user WHERE Id_user = :id AND Token = :token");
         $tokenQuery->execute(['id' => $userId, 'token' => $token]);
-        return $tokenQuery->fetch();
+        $user = $tokenQuery->fetch();
 
-    } catch (Exception $e) {
-        $json = array("status" => $e->getCode(), "message" => $e->getMessage());
-        echo json_encode($json);
-        exit;
-    }
-}
-
-function queryUser($bdd, $userId){
-    $userQuery = $bdd->prepare("SELECT * FROM user WHERE Id_user = :id");
-    $userQuery->execute(['id' => $userId]);
-    return $userQuery->fetch();
-}
-
-function createCR($bdd, $userId, $timeStamp, $token, $motif, $date, $note, $praticien, $visiteur, $cabinet, $region, $echantillon1, $echantillon2, $commentaire){
-    try {
-        $user = queryUser($bdd, $userId);
-        if (checkUserIdOrToken($userId, $token) && checkTimeStamp($bdd, $userId, $token)) {
+        if ($user) {
             $timeElapsed = time() - strtotime($user['TimeStamp']);
-            if ($timeElapsed > $timeStamp) {
+            if ($timeElapsed > 6000) {
                 throw new Exception("Token expired", 401);
             }
+
             function verify($param)
             {
                 return isset($param) && trim($param) !== '';
             }
+
+            $motif = $_POST['motif'];
+            $date = $_POST['date'];
+            $note = $_POST['note'];
+            $praticien = intval($_POST['id_praticien']);
+            $echantillon1 = $_POST['echantillon1'];
+            $echantillon2 = $_POST['echantillon2'] ?? null;
+            $commentaire = $_POST['commentaire'];
+            $visiteur = intval($_POST['id_visiteur']);
+            $cabinet = $_POST['cabinet'];
+            $region = $_POST['region'];
 
             if (!verify($motif) && !verify($date) && !verify($note) && !verify($praticien) && !verify($echantillon1) && !verify($commentaire) && !verify($visiteur) && !verify($cabinet) && !verify($region)) {
                 throw new Exception("Les champs obligatoires ne peuvent pas être vides ou null.", 400);
@@ -49,22 +52,12 @@ function createCR($bdd, $userId, $timeStamp, $token, $motif, $date, $note, $prat
             $updateTimestamp = $bdd->prepare("UPDATE user SET TimeStamp = CURRENT_TIMESTAMP WHERE Id_user = :id");
             $updateTimestamp->execute(['id' => $userId]);
             $json = array("status" => 200, "message" => "Compte-rendu créé avec succès");
-
-            return json_encode($json);
         }
+
     } catch (Exception $e) {
         $json = array("status" => $e->getCode(), "message" => $e->getMessage());
-        return json_encode($json);
     }
 }
-
-function getAllPraticien($bdd) {
-    $requetePraticienAll = $bdd->query("SELECT id_praticien, nom, id_cabinet FROM Praticien");
-    return $requetePraticienAll->fetchAll();
-}
-function getAllEchantillions($bdd) {
-    $requeteEchantillonAll = $bdd->query("SELECT id_echantillon, nom, quantite FROM Echantillon WHERE sortie = 0");
-    return $requeteEchantillonAll->fetchAll();
-}
+echo json_encode($json);
 
 ?>

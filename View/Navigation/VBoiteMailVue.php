@@ -4,7 +4,7 @@
     <h2 class="TitlePage">Boite de Messagerie</h2>
 
     <?php
-    foreach ($resultatsMail as $row) {
+    foreach ($mails as $row) {
         echo "
                         <details class='historiqueCR gras'>
                             <summary> 
@@ -31,3 +31,4 @@
     </script>
 
 </div>
+

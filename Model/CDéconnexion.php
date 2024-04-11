@@ -6,6 +6,6 @@
 
     $bdd = NULL;
 
-    header('Location: Index.php?page=IndexMain');
+    header('Location: index.php?page=IndexMain');
 
 ?>

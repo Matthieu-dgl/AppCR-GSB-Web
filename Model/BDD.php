@@ -1,8 +1,7 @@
 <?php
 
 try {
-    $password = "quckijnocVas9fixhi";
-    $bdd = new PDO('mysql:host=matthiuadmin.mysql.db;dbname=matthiuadmin;charset=utf8;', 'matthiuadmin', $password, array(PDO::ATTR_PERSISTENT => true));
+    $bdd = new PDO('mysql:host=localhost;dbname=AppCR;charset=utf8;', 'root', "", array(PDO::ATTR_PERSISTENT => true));
 } catch (PDOException $e) {
     die($e->getMessage());
 }

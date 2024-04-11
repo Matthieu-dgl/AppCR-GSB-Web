@@ -62,7 +62,7 @@ if (isset($_POST['boutton'])) {
     }
 }
 
-$QueryRegion = "SELECT nom FROM REGION";
+$QueryRegion = "SELECT nom FROM Region";
 $nomRegion = $bdd->prepare($QueryRegion);
 $nomRegion->execute();
 ?>

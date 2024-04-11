@@ -2,7 +2,7 @@
 <div>
 
     <h1 class="TitlePage">Liste des Praticiens</h1>
-    <a class="ButtonOption" href="index.php?page=AjouterPraticien">Ajouter un praticien</a>
+    <a class="ButtonOption" href="Index.php?page=AjouterPraticien">Ajouter un praticien</a>
     <table class="tableauP">
         <tr class="thP" >
             <th class="thP">ID</th>

@@ -5,18 +5,18 @@ session_start();
 if (isset($_GET['id_praticien'])) {
     $id_praticien = $_GET['id_praticien'];
 
-    $queryPraticienDetail = "SELECT id_praticien, Praticien.nom, Praticien.prenom, Praticien.specialité,description FROM Praticien join Cabinet on Praticien.id_cabinet=Cabinet.id_cabinet  join region on cabinet.id_region=Region.id_region WHERE id_praticien = :id";
+    $queryPraticienDetail = "SELECT id_praticien, Praticien.nom, Praticien.prenom, Praticien.specialité,description FROM Praticien join Cabinet on Praticien.id_cabinet=Cabinet.id_cabinet  join Region on Cabinet.id_region=Region.id_region WHERE id_praticien = :id";
     $PraticienDetail = $bdd->prepare($queryPraticienDetail);
     $PraticienDetail->bindParam(':id', $id_praticien);
     $PraticienDetail->execute();
 
-    $queryCabinetDetail = "SELECT Cabinet.nom as 'nomCabinet', Cabinet.id_cabinet as 'idCabinet', Cabinet.ville as 'ville', Cabinet.codePostal as 'CP', Cabinet.rue as 'rue', Region.nom as 'region' FROM Praticien join Cabinet on Praticien.id_cabinet=Cabinet.id_cabinet  join region on cabinet.id_region=Region.id_region WHERE id_praticien = :id";
+    $queryCabinetDetail = "SELECT Cabinet.nom as 'nomCabinet', Cabinet.id_cabinet as 'idCabinet', Cabinet.ville as 'ville', Cabinet.codePostal as 'CP', Cabinet.rue as 'rue', Region.nom as 'region' FROM Praticien join Cabinet on Praticien.id_cabinet=Cabinet.id_cabinet  join Region on Cabinet.id_region=Region.id_region WHERE id_praticien = :id";
     $CabinetDetail = $bdd->prepare($queryCabinetDetail);
     $CabinetDetail->bindParam(':id', $id_praticien);
     $CabinetDetail->execute();
 
 
-    $QueryRegion = "SELECT nom FROM REGION";
+    $QueryRegion = "SELECT nom FROM Region";
     $nomRegion = $bdd->prepare($QueryRegion);
     $nomRegion->execute();
 
@@ -53,7 +53,7 @@ if (isset($_POST['button_praticien'])) {
         $queryUpdateCabinet = "
     UPDATE Cabinet 
     JOIN Praticien ON Cabinet.id_cabinet = Praticien.id_cabinet 
-    SET Cabinet.nom = ?, Cabinet.ville = ?, Cabinet.codePostal = ?, Cabinet.rue = ?, Cabinet.id_region = (SELECT id_region FROM region WHERE nom = ?) 
+    SET Cabinet.nom = ?, Cabinet.ville = ?, Cabinet.codePostal = ?, Cabinet.rue = ?, Cabinet.id_region = (SELECT id_region FROM Region WHERE nom = ?) 
     WHERE Praticien.id_praticien = ?";
 
 

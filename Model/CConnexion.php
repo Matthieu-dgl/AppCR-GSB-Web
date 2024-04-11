@@ -2,6 +2,8 @@
 
 session_start();
 
+include ('BDD.php');
+
 if (isset($_POST['button'])) {
     if (!empty($_POST['email']) && !empty($_POST['password'])) {
         $email = htmlspecialchars($_POST['email']);

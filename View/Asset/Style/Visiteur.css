@@ -2,24 +2,26 @@
 
 #FormCR {
     margin-top: 10vw;
+    margin-right: 5vw;
+    margin-left: 5vw;
 }
 
 #FormCR h1 {
     margin-top: -5vw;
     font-size: 4vw;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
     color: #052550;
 }
 
 #FormCR label {
-    font-family: "Helvetica Neue";
+    font-family: Lato;
     color: #052550;
+    font-weight: bold;
 }
 
 #FormCR input {
     height: 3vw;
     width: 20vw;
-    margin-top: 2vw;
     border: 1px solid #052550;
     background-color: #EDE8E4;
 }
@@ -30,13 +32,26 @@
 }
 
 #FormCR select {
-    margin-top: 2vw;
+    height: 3vw;
+    width: 21vw;
+    background-color: #EDE8E4;
+    appearance: none;
+    border-radius: 0;
+    cursor: pointer;
 }
+
+#FormCR option {
+    margin-left: 1vw;
+}
+
+#echantillon2 {
+    margin-left: 2vw;
+}
+
 
 #FormCR textarea {
     height: 3vw;
     width: 20vw;
-    margin-top: 2vw;
     border: 1px solid #052550;
     background-color: #EDE8E4;
 }
@@ -53,7 +68,9 @@
     border-radius: 10px;
     padding: 1vw;
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-size: 1rem;
+    font-family: Lato;
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -67,7 +84,7 @@
     margin-bottom: 2vw;
     font-size: 2vw;
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
 }
 
 .historiqueCR {
@@ -78,7 +95,7 @@
 
 .historiqueCR summary {
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
     padding: 0.5vw;
 }
 
@@ -86,11 +103,40 @@
     font-weight: bold;
 }
 
+.traitV {
+    height: 0.4vw;
+    width: 100%;
+    background-color: #052550;
+}
+
 .commentaireCR {
     color: #052550;
     font-size: 1vw;
+    margin-top: 2vw;
     margin-left: 2vw;
-    font-family: "Helvetica Neue";
+    margin-right: 2vw;
+    margin-bottom: 5vw;
+    font-family: Lato;
+}
+
+.BtnModifier {
+    margin-left: 2vw;
+    margin-bottom: 5vw;
+    color: #052550;
+    border: 1px solid #052550;
+    padding: 1vw;
+    font-size: 1vw;
+}
+
+.BtnSupprimer {
+    margin-left: 70%;
+    margin-bottom: 2vw;
+    border: 1px solid #052550;
+    padding: 1vw;
+    font-size: 1vw;
+    cursor: pointer;
+    color: #EDE8E4;
+    background-color: darkred;
 }
 
 .gras {
@@ -107,7 +153,7 @@
 }
 
 .TextConsult {
-    font-family: "Helvetica Neue";
+    font-family: Lato;
     color: #052550;
     font-weight: normal;
 }
@@ -124,7 +170,7 @@
 
 .FormInfo label {
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
     font-weight: bold;
 }
 
@@ -143,4 +189,15 @@
     background-color: #E9CBB1;
     border: none;
     border-radius: 10px;
+}
+
+#ButtonLireMail {
+    margin-left: 70%;
+    margin-bottom: 2vw;
+    border: 1px solid #052550;
+    padding: 1vw;
+    font-size: 1vw;
+    cursor: pointer;
+    color: #052550;
+    background-color: #d2ccc9;
 }

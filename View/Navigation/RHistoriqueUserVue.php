@@ -3,7 +3,7 @@
 
     <h1 class="TitlePage">Equipe</h1>
 
-    <a class="ButtonOption" href="index.php?page=Inscription">Ajouter un membre</a>
+    <a class="ButtonOption" href="Index.php?page=Inscription">Ajouter un membre</a>
     <table class="tableauU">
         <tr class="trU" >
             <th class="thU">ID</th>
@@ -24,7 +24,7 @@
             echo '<td class="tdU">' . $row['Email'] . '</td>';
             echo '<td class="tdU">' . $row['nomR'] . '</td>';
             echo '<td class="tdU">' . $row['Type'] . '</td>';
-            echo '<td class="tdU"><a href="index.php?page=ModifUser&Id_user=' . $row['Id_user'] . '">Modifier</a></td>';
+            echo '<td class="tdU"><a class="ModifyProduit" href="index.php?page=ModifUser&Id_user=' . $row['Id_user'] . '">Modifier</a></td>';
             echo '</tr>';
         }
         ?>

@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-
-<html>
 <?php
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
@@ -22,20 +19,20 @@ if(isset($_GET['page'])) {
 
     }
 }
-
-include("Controller/Head.php");
-include("Model/BDD.php");
-if($controleur != null) include("Controller/" . $controleur . ".php");
-if($model != null) include("Model/" . $model . ".php");
-if($header != null) include("View/Header/" . $header . ".php");
-
-
 ?>
 
+<!DOCTYPE html>
+<html>
+<head>
+
+    <?php include("Controller/Head.php"); ?>
+    <?php include("Model/BDD.php"); ?>
+    <?php if($controleur != null) include("Controller/" . $controleur . ".php"); ?>
+    <?php if($model != null) include("Model/" . $model . ".php"); ?>
+    <?php if($header != null) include("View/Header/" . $header . ".php"); ?>
+</head>
 <body>
-<?php
-if($vue != null) include("View/Navigation/" . $vue . ".php");
-if($js != null) include("Js/" . $js . ".php");
-?>
+<?php if($vue != null) include("View/Navigation/" . $vue . ".php"); ?>
+<?php if($js != null) include("Js/" . $js . ".php"); ?>
 </body>
 </html>

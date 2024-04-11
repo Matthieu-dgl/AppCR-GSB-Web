@@ -3,8 +3,8 @@ include('ApiCreate.php');
 session_start();
 
 try {
-    $password = "quckijnocVas9fixhi";
-    $bdd = new PDO('mysql:host=matthiuadmin.mysql.db;dbname=matthiuadmin;charset=utf8;', 'matthiuadmin', $password, array(PDO::ATTR_PERSISTENT => true));    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $password = "Fabzummogxe3";
+    $bdd = new PDO('mysql:host=manonca421.mysql.db;dbname=manonca421;charset=utf8;', 'manonca421', $password, array(PDO::ATTR_PERSISTENT => true));    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     $json = array("status" => 500, "message" => "Erreur de connexion à la base de données: " . $e->getMessage());
     echo json_encode($json);
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $echantillon1 = $_POST['echantillon1'];
     $echantillon2 = $_POST['echantillon2'] ?? null;
     $commentaire = $_POST['commentaire'];
-    $url = 'http://localhost:8080/AppCR-GSB/Apis/ApiCreate.php';
+    $url = 'http://manonclair/AppCRP/Apis/ApiCreate.php';
 
     $data = array(
         'Id_user' => $userId,

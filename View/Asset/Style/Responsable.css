@@ -31,7 +31,7 @@ td {
 }
 
 .tableau {
-    font-family: "Helvetica Neue", sans-serif;
+    font-family: Lato, sans-serif;
     color: #052550;
     margin-top: -30vw;
     margin-left: 20vw;
@@ -42,7 +42,7 @@ td {
     margin-top: 4vw;
     font-size: 3vw;
     color:  #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
     font-weight: bold;
 }
 
@@ -78,8 +78,13 @@ td {
 
 .tableauP {
     margin-top: 3vw;
-    font-family: "Helvetica Neue", sans-serif;
+    margin-right: 2vw;
+    font-family: Lato, sans-serif;
     color: #052550;
+}
+
+.ModifyProduit {
+    color: #E9CBB1;
 }
 
 /*tableau d'affichage user*/
@@ -110,7 +115,7 @@ td {
 
 .tableauU {
     margin-top: 5vw;
-    font-family: "Helvetica Neue", sans-serif;
+    font-family: Lato, sans-serif;
     color: #052550;
 }
 
@@ -123,7 +128,7 @@ td {
 .FormAjoutPraticien h2 {
     margin-top: 2vw;
     font-size: 4vw;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
     color: #052550;
 }
 
@@ -137,7 +142,7 @@ td {
 
 .FormAjoutPraticien label {
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
 }
 
 .FormAjoutPraticien select {
@@ -154,14 +159,14 @@ td {
     border-radius: 10px;
     padding: 1vw;
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
     cursor: pointer;
 }
 
 .FormAjoutPraticien h3 {
     margin-top: 1vw;
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
     font-size: 1vw;
 }
 
@@ -199,7 +204,7 @@ td {
     text-align: center;
     font-size: 2vw;
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
 }
 
 .div_modif label {
@@ -209,7 +214,7 @@ td {
     margin-left: 2vw;
     line-height: 2.5vw;
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
 }
 
 .div_modif p {
@@ -219,7 +224,7 @@ td {
     margin-left: 2vw;
     line-height: 2.5vw;
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
 }
 
 .div_modif button {
@@ -230,7 +235,7 @@ td {
     border: none;
     background-color: #052550;
     color: #EDE8E4;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
     font-weight: bold;
 }
 
@@ -243,7 +248,7 @@ td {
 
 .CRassocie summary {
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
     padding: 0.5vw;
 }
 
@@ -251,7 +256,7 @@ td {
     color: #052550;
     font-size: 1vw;
     margin-left: 2vw;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
 }
 
 
@@ -265,7 +270,7 @@ td {
 
 .historiqueCRglobal summary {
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
     padding: 0.5vw;
 }
 
@@ -273,7 +278,7 @@ td {
     color: #052550;
     font-size: 1vw;
     margin-left: 2vw;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
 }
 
 
@@ -293,7 +298,7 @@ td {
     margin-left: 2vw;
     line-height: 2.5vw;
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
 }
 
 .div_praticien p {
@@ -303,7 +308,7 @@ td {
     margin-left: 2vw;
     line-height: 2.5vw;
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
 }
 
 .div_cabinet{
@@ -319,7 +324,7 @@ td {
     margin-left: 2vw;
     line-height: 2.5vw;
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
 }
 
 .div_cabinet p {
@@ -329,7 +334,7 @@ td {
     margin-left: 2vw;
     line-height: 2.5vw;
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
 }
 
 .titre_praticien{
@@ -355,7 +360,7 @@ td {
     margin-left: 2vw;
     line-height: 2.5vw;
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
 }
 
 .div_produit p {
@@ -365,7 +370,7 @@ td {
     margin-left: 2vw;
     line-height: 2.5vw;
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
 }
 
 .div_produit button {
@@ -376,7 +381,7 @@ td {
     border: none;
     background-color: #052550;
     color: #EDE8E4;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
     font-weight: bold;
 }
 
@@ -404,7 +409,7 @@ td {
     margin-left: 2vw;
     line-height: 2.5vw;
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
 }
 
 .div_user p {
@@ -414,7 +419,7 @@ td {
     margin-left: 2vw;
     line-height: 2.5vw;
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
 }
 
 .div_user button {
@@ -425,7 +430,7 @@ td {
     border: none;
     background-color: #052550;
     color: #EDE8E4;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
     font-weight: bold;
 }
 
@@ -447,7 +452,7 @@ td {
     margin : 2vw;
     font-size: 3vw;
     text-align: center;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
     font-weight: bold;
     color: #052550;
 
@@ -457,7 +462,7 @@ td {
     color: #052550;
     margin: 1.5vw;
     text-align: center;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
 }
 
 .statDiagramme{
@@ -476,6 +481,19 @@ td {
     color: #052550;
     margin: 1.5vw;
     text-align: center;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
 }
 
+#NomEchantillion {
+    height: 3vw;
+    width: 21vw;
+    background-color: #EDE8E4;
+    appearance: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+#echantillonChart1 {
+    margin-top: 5vw;
+    margin-left: 5vw;
+}

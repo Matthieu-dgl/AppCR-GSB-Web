@@ -1,13 +1,14 @@
 <div></div>
 <div>
-    <form id="FormCR" method="post" action="" align="center">
+    <form id="FormCR" method="post" action="" ">
         <h1 id="TitreLogin" class="Text Titre">Faire un Compte Rendu </h1>
-
-        <label>Motif -> </label>
-        <input type="text" name="motif" placeholder="Motif"><br>
-        <label>Date de la visite -> </label>
-        <input type="date" name="date"><br>
-        <label>Mettre une note -> </label>
+        <br>
+        <br>
+        <label>Motif</label><br>
+        <input type="text" name="motif" placeholder="Motif"><br><br>
+        <label>Date de la visite</label><br>
+        <input type="date" name="date"><br><br>
+        <label>Mettre une note</label><br>
         <select type="" name="note" placeholder="Email">
             <option value="NULL">Mettre une note</option>
             <option value="0">0</option>
@@ -17,10 +18,10 @@
             <option value="4">4</option>
             <option value="5">5</option>
         </select>
-        <br>
+        <br><br>
         <?php
         echo "
-            <label>Choisir un Praticien -> </label>
+            <label>Choisir un Praticien</label><br>
             <select name='praticien' required autocomplete='off'>
                 <option value='NULL'>Choisir un praticien</option>";
 
@@ -33,11 +34,11 @@
           <input name='idDemande' type='hidden' value='{$gd['id_praticien']}'>
           ";
         ?>
-        <br>
+        <br><br>
         <?php
 
         echo "
-            <label>Choisir un ou plusieurs échantillons -> </label>
+            <label>Choisir un ou plusieurs échantillons</label><br>
             <select name='idechantillon1' required autocomplete='off'>
                 <option value='NULL'>Choisir un échantillon</option>";
 
@@ -69,9 +70,9 @@
           ";
         ?>
 
-        <br>
-        <label>Mettre un commentaire -> </label>
-        <textarea name="commentaire" placeholder="Commentaire"></textarea><br>
+        <br><br>
+        <label>Mettre un commentaire</label><br>
+        <textarea name="commentaire" placeholder="Commentaire"></textarea><br><br>
 
         <button name="button">Envoyer le Compte Rendu</button>
     </form>

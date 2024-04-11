@@ -14,7 +14,7 @@ if(isset($_POST['button'])) {
 
 }
 
-$requete = $bdd->query("SELECT * FROM user WHERE type = 'visiteur'");
+$requete = $bdd->query("SELECT id_user, Nom FROM user WHERE type = 'visiteur'");
 $VisiteurAll = $requete->fetchAll();
 
 ?>

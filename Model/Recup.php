@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         mail($to, $subject, $message, $headers);
 
-        header("Location: Index.php?page=Reset");
+        header("Location: index.php?page=Reset");
         exit();
     } else {
         echo "<script> alert('L adresse e-mail n existe pas dans notre système. Veuillez réessayer.') </script>";

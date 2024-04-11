@@ -4,7 +4,7 @@
 
 .FormLogin h1 {
     font-size: 4vw;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
     color: #052550;
 }
 
@@ -32,14 +32,14 @@
     border-radius: 10px;
     padding: 1vw;
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
     cursor: pointer;
 }
 
 .FormLogin h3 {
     margin-top: 1vw;
     color: #052550;
-    font-family: "Helvetica Neue";
+    font-family: Lato;
     font-size: 1vw;
 }
 

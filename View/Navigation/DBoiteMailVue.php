@@ -1,7 +1,10 @@
 <div></div>
 <div id="container_historiqueCR">
     <h2 class="TitlePage">Boîte Mail</h2>
-    <a  class="ButtonOption" href="index.php?page=EnvoiMail">Nouveau Mail</a>
+
+    <a  class="ButtonOption" href="Index.php?page=EnvoiMail">Nouveau Mail</a>
+    <br><br>
+
     <?php
     foreach ($mails as $row) {
         echo "
@@ -13,3 +16,4 @@
     }
     ?>
 </div>
+
