@@ -3,7 +3,8 @@
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST["email"];
 
-    $bdd = new PDO('mysql:host=localhost;dbname=AppCR;charset=utf8;', 'root', '', array(PDO::ATTR_PERSISTENT => true));
+    $password = "Fabzummogxe3";
+    $bdd = new PDO('mysql:host=manonca421.mysql.db;dbname=manonca421;charset=utf8;', 'manonca421', $password, array(PDO::ATTR_PERSISTENT => true));
     $code = $bdd->prepare("SELECT * FROM user WHERE Email = ?");
     $code->execute([$email]);
 
@@ -20,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         mail($to, $subject, $message, $headers);
 
-        header("Location: index.php?page=Reset");
+        header("Location: Index.php?page=Reset");
         exit();
     } else {
         echo "<script> alert('L adresse e-mail n existe pas dans notre système. Veuillez réessayer.') </script>";

@@ -5,7 +5,11 @@
         <br>
         <br>
         <label>Motif</label><br>
-        <input type="text" name="motif" placeholder="Motif"><br><br>
+        <select type="" name="motif" placeholder="Motif">
+            <option value="NULL">Sélectionner un motif</option>
+            <option value="Visite">Visite</option>
+            <option value="Contre Visite">Contre Visite</option>
+        </select><br><br>
         <label>Date de la visite</label><br>
         <input type="date" name="date"><br><br>
         <label>Mettre une note</label><br>

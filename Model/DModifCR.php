@@ -34,7 +34,7 @@ if (isset($_POST['button_CR'])) {
         $UpdateCR = $bdd->prepare($queryUpdateCR);
         $UpdateCR->execute(array($nouvelle_date, $nouveau_motif, $nouveau_bilan, $nouvelle_note, $id_CR));
 
-        header('Location: index.php?page=HistoriqueCompteRenduDelegue');
+        header('Location: Index.php?page=HistoriqueCompteRenduDelegue');
         exit();
     }
 }

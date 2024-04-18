@@ -121,3 +121,12 @@
     margin-top: 5vw;
     margin-left: 5vw;
 }
+
+.selectStat {
+    height: 3vw;
+    width: 21vw;
+    background-color: #EDE8E4;
+    appearance: none;
+    border-radius: 0;
+    cursor: pointer;
+}

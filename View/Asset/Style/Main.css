@@ -127,6 +127,7 @@ iframe {
 
 .carte_produit {
     margin-top: 2vw;
+    padding-bottom: 2vw;
     height: 20vw;
     width: 25vw;
 }
@@ -164,6 +165,16 @@ iframe {
     padding-left: 0.5vw;
     padding-right: 0.5vw;
     font-size: 1vw;
+    color: #052550;
+    font-family: Lato;
+    font-weight: initial;
+}
+
+.carte_produit_derriere h1 {
+    padding-top: 0.5vw;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    font-size: 2vw;
     color: #052550;
     font-family: Lato;
     font-weight: initial;

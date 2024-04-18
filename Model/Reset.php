@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $task->execute([$enteredCode]);
 
     if ($task->rowCount() > 0) {
-        header("Location: index.php?page=Change");
+        header("Location: Index.php?page=Change");
         exit();
     } else {
         echo "<script> alert('Le code est invalide.') </script>";

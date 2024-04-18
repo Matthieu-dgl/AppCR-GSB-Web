@@ -201,7 +201,7 @@ td {
 
 .titre_praticien{
     margin-top: 3vw;
-    text-align: center;
+
     font-size: 2vw;
     color: #052550;
     font-family: Lato;
@@ -286,7 +286,6 @@ td {
 
 .div_praticien{
     margin-left: 5vw;
-    background: #ecd8c7;
     border-radius: 10px;
     height: 30vw;
 }
@@ -312,7 +311,6 @@ td {
 }
 
 .div_cabinet{
-    background: #ecd8c7;
     border-radius: 10px;
     height: 30vw;
 }
@@ -339,7 +337,6 @@ td {
 
 .titre_praticien{
     margin-top: 3vw;
-    text-align: center;
     font-size: 2vw;
     color: #052550;
 }
@@ -496,4 +493,8 @@ td {
 #echantillonChart1 {
     margin-top: 5vw;
     margin-left: 5vw;
+}
+
+#FormInfoModifPraticien {
+    margin-left: 10vw;
 }

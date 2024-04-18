@@ -1,42 +1,46 @@
+
 <div></div>
 <div>
-    <div class="div_praticien div_modif">
-        <h2 class="titre_praticien">Compte Rendu :</h2>
-        <?php
-        while ($row = $CR->fetch()) {
+    <h2 class="titre_praticien">Compte Rendu :</h2>
+    <?php
+    while ($row = $CR->fetch()) {
 
-            echo '<form action="" method="post">';
-            echo '<div id="CRDetails">';
-            echo '<p> Identifiant du CR : '.$row['id_compteRendu'] . '<br></p>';
+        echo '<form class="FormInfo" action="" method="post"><br><br><br>';
+        echo '<p class="labelStats"> Identifiant du CR'.$row['id_compteRendu'] . '<br><br></p>';
 
-            echo '<label for="motif">Motif : </label>';
-            echo '<input type="text" name="nouveau_motif" value="' . $row['motif'] . '"><br>';
+        echo '<label class="" for="motif">Motif : </label><br>';
+        echo ' <select  class="" type="" name="nouveau_motif" placeholder="Motif">
+            <option value="'.$row['motif'].'">'.$row['motif'].'</option>
+            <option value="Visite">Visite</option>
+            <option value="Contre Visite">Contre Visite</option>
+        </select><br><br>';
 
-            echo '<label for="note">Date : </label>';
-            echo '<input type="date" name="nouvelle_date" value="' . $row['date'] . '"><br>';
 
-            echo '<label for="praticien">Praticien : </label>';
-            echo "<select name='nouveau_praticien' required autocomplete='off'>";
-            echo "<option value='{$row['id_praticien']}'>{$row['pNom']}</option>";
+        echo '<label class="" for="note">Date</label><br>';
+        echo '<input type="date" name="nouvelle_date" value="' . $row['date'] . '"><br><br>';
 
-            foreach ($PraticienAll as $gd) {
-                echo "<option value='{$gd['id_praticien']}'>{$gd['nom']}</option>";
-            }
+        echo '<label class="" for="praticien">Praticien : </label><br>';
+        echo "<select name='nouveau_praticien' required autocomplete='off'>";
+        echo "<option value='{$row['id_praticien']}'>{$row['pNom']}</option>";
 
-            echo "</select><br>";
+        foreach ($PraticienAll as $gd) {
+            echo "<option value='{$gd['id_praticien']}'>{$gd['nom']}</option>";
+        }
 
-            echo '<label for="echantillon">Échantillon : </label>';
-            echo "<select name='nouvelle_echantillon' required autocomplete='off'>";
-            echo "<option value='{$row['eID']}'>{$row['eNom']}</option>";
+        echo "</select><br><br>";
 
-            foreach ($EchantillonAll as $gd) {
-                echo "<option value='{$gd['id_echantillon']}'>{$gd['nom']}</option>";
-            }
+        echo '<label class="" for="echantillon">Échantillon</label><br>';
+        echo "<select name='nouvelle_echantillon' required autocomplete='off'>";
+        echo "<option value='{$row['eID']}'>{$row['eNom']}</option>";
 
-            echo "</select><br>";
+        foreach ($EchantillonAll as $gd) {
+            echo "<option value='{$gd['id_echantillon']}'>{$gd['nom']}</option>";
+        }
 
-            echo '<label for="note">Note : </label>';
-            echo '<select name="nouvelle_note">
+        echo "</select><br><br>";
+
+        echo '<label class="" for="note">Note</label><br>';
+        echo '<select name="nouvelle_note">
                     <option value="' . $row['note'] . '"> ' . $row['note'] . '</option>
                     <option value="0">0</option>
                     <option value="1">1</option>
@@ -44,16 +48,15 @@
                     <option value="3">3</option>
                     <option value="4">4</option>
                     <option value="5">5</option>
-                    </select><br>';
+                    </select><br><br>';
 
-            echo '<label for="bilan">Bilan : </label>';
-            echo '<textarea name="nouveau_bilan">' . $row['bilan'] . '</textarea><br>';
+        echo '<label class="" for="bilan">Bilan : </label><br>';
+        echo '<textarea name="nouveau_bilan">' . $row['bilan'] . '</textarea><br><br><br>';
 
-            echo '<button name="button_CR">modifier</button>';
-            echo '</div>';
-            echo '</form>';
-        }
-        ?>
+        echo '<button class="ButtonStats" name="button_CR">modifier</button>';
+        echo '</form>';
+    }
+    ?>
 
-    </div>
+</div>
 </div>
