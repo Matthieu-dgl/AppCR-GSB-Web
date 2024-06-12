@@ -44,7 +44,7 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
         <form method="post" action="">
-            <label for="annee">Année :</label>
+            <label class="labelStats" for="annee">Année :</label>
             <select id="annee" name="annee">
                 <?php foreach ($years as $year) : ?>
                     <option value="<?= $year['annee'] ?>"><?= $year['annee'] ?></option>
@@ -52,17 +52,17 @@
                 <option value="autre">-------</option>
             </select>
 
-            <label for="echantillons">Échantillons :</label>
+            <label class="labelStats" for="echantillons">Échantillons :</label>
             <select id="NomEchantillon" name="echantillons">
                 <?php foreach ($echantillons as $row) : ?>
                     <option value="<?= $row['id_echantillon'] ?>"><?= $row['nom'] ?></option>
                 <?php endforeach; ?>
                 <option value="autre">-------</option>
             </select>
-            <button type="submit" name='button'>Exécuter</button>
+            <button class="ButtonStats" type="submit" name='button'>Rechercher</button>
         </form>
 
-        <canvas id="echantillonChart2" width="300" height="150"></canvas>
+        <canvas id="echantillonChart2" width="500" height=250"></canvas>
 
         <script>
             var ctx = document.getElementById('echantillonChart2').getContext('2d');
@@ -92,10 +92,39 @@
     </div>
 
 
+
     <h2 class="TitlePage">Compte Rendu sur la région</h2>
+
+    <form method="post">
+        <label class="labelStats">Mois :</label>
+        <select class="selectStat" name="mois">
+            <option value="01">Janvier</option>
+            <option value="02">Février</option>
+            <option value="03">Mars</option>
+            <option value="04">Avril</option>
+            <option value="05">Mai</option>
+            <option value="06">Juin</option>
+            <option value="07">Juillet</option>
+            <option value="08">Août</option>
+            <option value="09">Septembre</option>
+            <option value="10">Octobre</option>
+            <option value="11">Novembre</option>
+            <option value="12">Décembre</option>
+        </select>
+        <label class="labelStats">Nature du CR :</label>
+        <select class="selectStat" name="natureCR">
+            <option value="V">Visite</option>
+            <option value="CV">Contre Visite</option>
+        </select>
+        <button class="ButtonStats" name="buttonStat">Rechercher</button>
+    </form>
+
     <?php foreach ($data2 as $row): ?>
-        <p class="textDashboard"><span><?= $row['count'] ?></span> compte(s) rendu(s) dans le dernier mois</p>
+        <p class="textDashboard"><span><?= $row['count'] ?></span> compte(s) rendu(s) sur le mois <span><?= $row['month'] ?></span></p>
     <?php endforeach; ?>
+
+
+
     <h2 class="TitlePage">Visiteur sur la région</h2>
     <div class="scrollable-table">
         <table>

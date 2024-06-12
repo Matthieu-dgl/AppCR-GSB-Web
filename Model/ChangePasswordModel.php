@@ -8,7 +8,7 @@ try {
         $task = $bdd->prepare("UPDATE user SET Password = ? WHERE Email = ?");
         $task->execute([$newPassword, $email]);
         echo "<script> alert('Modification réussi !') </script>";
-        header("Location: Index.php?page=connexion");
+        header("Location: index.php?page=connexion");
         exit();
     }
 } catch (PDOException $e) {

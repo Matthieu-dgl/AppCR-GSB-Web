@@ -39,7 +39,7 @@ if (isset($_POST['button_praticien'])) {
         $UpdatePraticien = $bdd->prepare($queryUpdatePraticien);
         $UpdatePraticien->execute(array($nouveau_nom, $nouveau_prenom, $nouvelle_specialite, $nouvelle_description, $id_praticien));
 
-        header('Location: Index.php?page=ModifPraticien&id_praticien=' . $id_praticien);
+        header('Location: index.php?page=ModifPraticien&id_praticien=' . $id_praticien);
         exit();
     }
 }if (isset($_POST['button_cabinet'])) {
@@ -61,7 +61,7 @@ if (isset($_POST['button_praticien'])) {
         $updateCabinet->execute([$nouveau_nomC, $nouvelle_villeC, $nouveau_CPC, $nouvelle_rueC, $nouvelle_regionC, $id_praticien]);
 
         // Redirection ou autre logique après la mise à jour réussie
-        header('Location: Index.php?page=ModifPraticien&id_praticien=' . $id_praticien);
+        header('Location: index.php?page=ModifPraticien&id_praticien=' . $id_praticien);
         exit();
     } else {
         echo "Veuillez fournir toutes les informations nécessaires pour mettre à jour le cabinet.";

@@ -13,7 +13,7 @@ if (isset($_POST['button'])) {
         $user = $getUser->fetch();
         if ($user && password_verify($password, $user['Password'])) {
             if ($user['Type'] == "admin") {
-                header('Location: Index.php?page=IndexAdmin');
+                header('Location: index.php?page=IndexAdmin');
                 exit();
             } else if ($user['Type'] == "responsable") {
                 getUserInfo($bdd, $email, 'Id_user');
@@ -23,7 +23,7 @@ if (isset($_POST['button'])) {
                 getUserInfo($bdd, $email, 'Region');
                 getUserInfo($bdd, $email, 'Type');
                 getUserInfo($bdd, $email, 'Token');
-                header('Location: Index.php?page=IndexResponsable');
+                header('Location: index.php?page=IndexResponsable');
                 exit();
             } else if ($user['Type'] == "delegue") {
                 getUserInfo($bdd, $email, 'Id_user');
@@ -33,7 +33,7 @@ if (isset($_POST['button'])) {
                 getUserInfo($bdd, $email, 'Region');
                 getUserInfo($bdd, $email, 'Type');
                 getUserInfo($bdd, $email, 'Token');
-                header('Location: Index.php?page=IndexDelegue');
+                header('Location: index.php?page=IndexDelegue');
                 exit();
             } else if ($user['Type'] == "visiteur") {
                 getUserInfo($bdd, $email, 'Id_user');
@@ -43,7 +43,7 @@ if (isset($_POST['button'])) {
                 getUserInfo($bdd, $email, 'Region');
                 getUserInfo($bdd, $email, 'Type');
                 getUserInfo($bdd, $email, 'Token');
-                header('Location: Index.php?page=IndexVisiteur');
+                header('Location: index.php?page=IndexVisiteur');
                 exit();
             } else {
                 echo "<script> alert('Type d utilisateur non reconnu !') </script>";

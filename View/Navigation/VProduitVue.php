@@ -4,18 +4,17 @@
 
     <div class="page_produit">
         <?php
-        while ($row = $Produit->fetch()) {
-            echo "
+            while ($row = $Produit->fetch()) {
+                echo "
                     <div class='carte_produit'>
                         <div class='carte_produit_derriere'>
                             <div class='carte_produit_devant'><br><br><img src='View/Asset/Content/pills.gif'><br>{$row['nom']}</div>
-                            <h1><b>{$row['nom']}</h1></b><br>
                             <h2><span>Date de Sortie : </span>{$row['dateDistribution']}</h2><br>
                             <h2><span>Description : </span><br>{$row['description']}</h2>
                         </div>
                     </div>
                 ";
-        }
+            }
         ?>
     </div>
 

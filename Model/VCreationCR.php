@@ -1,8 +1,7 @@
 <?php
 session_start();
 
-$password = "Fabzummogxe3";
-$bdd = new PDO('mysql:host=manonca421.mysql.db;dbname=manonca421;charset=utf8;', 'manonca421', $password, array(PDO::ATTR_PERSISTENT => true));
+$bdd = new PDO('mysql:host=localhost;dbname=AppCR;charset=utf8;', 'root', "", array(PDO::ATTR_PERSISTENT => true));
 $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // Requête SQL pour récupérer tous les Praticiens
@@ -38,7 +37,7 @@ if(isset($_POST['button'])){
 
 
         echo "<script> alert('Demande envoyé !') </script>";
-        header('Location: Index.php?page=HistoriqueCompteRendu');
+        header('Location: index.php?page=HistoriqueCompteRendu');
     } catch (PDOException $e) {
         echo "Erreur d'insertion dans la base de données : " . $e->getMessage();
     }

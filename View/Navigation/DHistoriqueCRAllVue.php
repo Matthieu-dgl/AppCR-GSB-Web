@@ -11,7 +11,7 @@
                         <h3 class='commentaireCR'>Echantillon 1 : {$row['Enom1']}</h3>
                         <h3 class='commentaireCR'>Echantillon 2 : {$row['Enom2']}</h3>
                         <h3 class='commentaireCR'>Cabinet : {$row['Cnom']}</h3>
-                      
+                        <br>
                         <h3 class='commentaireCR'>Bilan : <br> {$row['bilan']}</h3>
                 </details><br><br>
             ";

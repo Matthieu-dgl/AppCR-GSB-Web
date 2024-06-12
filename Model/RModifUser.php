@@ -33,7 +33,7 @@ if (isset($_POST['button_user'])) {
                 $UpdateUser->execute(array($nouveau_nom, $nouveau_prenom, $nouvelle_email, $Id_user));
             }
 
-            header('Location: Index.php?page=HistoriqueUser');
+            header('Location: index.php?page=HistoriqueUser');
             exit();
         } else {
             echo "Les mots de passe ne correspondent pas.";

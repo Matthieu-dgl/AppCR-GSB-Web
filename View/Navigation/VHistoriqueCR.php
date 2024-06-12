@@ -12,7 +12,7 @@
                         <h3 class='commentaireCR'>{$row['bilan']}</h3>
                         <h3 class='commentaireCR'>Note : {$row['note']}</h3>
                         <form method='post'>
-                            <a class='BtnModifier' href='Index.php?page=ModifCR&id_compteRendu={$row['id_compteRendu']}'>Modifier</a>
+                            <a class='BtnModifier' href='index.php?page=ModifCR&id_compteRendu={$row['id_compteRendu']}'>Modifier</a>
                             <input type='hidden' name='idCR' value='{$row['id_compteRendu']}'>
                             <button class='BtnSupprimer' name='supprimer'>Supprimer</button>
                         </form>

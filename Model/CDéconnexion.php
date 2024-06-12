@@ -1,11 +1,13 @@
 <?php
 
-    session_start();
-    $_SESSION = array();
-    session_destroy();
 
-    $bdd = NULL;
+session_start();
+$_SESSION = array();
+session_destroy();
 
-    header('Location: Index.php?page=IndexMain');
+$bdd = NULL;
+
+header('Location: index.php?page=IndexMain');
+
 
 ?>

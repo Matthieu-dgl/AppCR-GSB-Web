@@ -26,7 +26,7 @@
             echo '<td class="tdP">' . $row['nomR'] . '</td>';
             echo '<td class="tdP">' . $row['nomU'] .' '.$row['prenomU'] . '</td>';
 
-            echo '<td class="tdP"><a href="Index.php?page=ModifPraticien&id_praticien=' . $row['id_praticien'] . '">Modifier</a></td>';
+            echo '<td class="tdP"><a href="index.php?page=ModifPraticien&id_praticien=' . $row['id_praticien'] . '">Modifier</a></td>';
             echo '</tr>';
         }
         ?>

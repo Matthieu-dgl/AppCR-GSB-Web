@@ -44,14 +44,14 @@ if (isset($_POST['boutton'])) {
                     $insertVisiteur = $bdd->prepare('INSERT INTO Visiteur (nom, prenom, id_user) VALUES (?, ?, ?)');
                     $insertVisiteur->execute(array($nom, $prénom, $userId));
 
-                    header('location: Index.php?page=Inscription');
+                    header('location: index.php?page=Inscription');
                 }
 
                 // Si l'utilisateur est de type 'visiteur', insérer dans la table "Visiteur"
                 if ($type == 'visiteur') {
                     $insertVisiteur = $bdd->prepare('INSERT INTO Visiteur (nom, prenom, id_user) VALUES (?, ?, ?)');
                     $insertVisiteur->execute(array($nom, $prénom, $userId));
-                    header('location: Index.php?page=Inscription');
+                    header('location: index.php?page=Inscription');
                 }
             } else {
                 echo "<script> alert('La confirmation du mot de passe ne correspond pas.') </script>";

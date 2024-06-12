@@ -23,7 +23,7 @@ if (isset($_POST['button_produit'])) {
         $UpdatePraticien = $bdd->prepare($queryUpdatePraticien);
         $UpdatePraticien->execute(array($nouveau_nom, $nouvelle_date, $nouvelle_Quantité, $nouvelle_description, $nouvelle_sortie, $id_echantillon));
 
-        header('Location: Index.php?page=ProduitResponsable');
+        header('Location: index.php?page=ProduitResponsable');
         exit();
     }
 }
