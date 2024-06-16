@@ -25,7 +25,7 @@ if (isset($_POST['BtnModifInfoPerso'])) {
         $UpdateInfo = $bdd->prepare($queryUpdateInfo);
         $UpdateInfo->execute(array($nouveau_nom, $nouveau_prenom, $nouveau_mail, $nouvelle_region, $idUser));
 
-        header('Location: index.php?page=Consultation');
+        header('Location: Index.php?page=Consultation');
         exit();
     }
 }

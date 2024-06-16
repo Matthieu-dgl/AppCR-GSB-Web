@@ -21,6 +21,7 @@ $routes = array(
     'Consultation' => array('nom' => 'Consultation','header'=> 'HeaderVisiteur','controleur' => null,'model' => 'VConsultation', 'vue' => 'VConsultationVue', 'js' => null,'bdd' => 'BDD' , 'visible' => true, 'active' => true),
     'ModifConsultation' => array('nom' => 'ModifConsultation','header'=> 'HeaderVisiteur','controleur' => null,'model' => 'VModifConsultation', 'vue' => 'VModifConsultationVue', 'js' => null,'bdd' => 'BDD' , 'visible' => true, 'active' => true),
 
+
     // Delegue Régionale
     'IndexDelegue' => array('nom' => 'IndexDelegue' ,'header'=> 'HeaderDelegue','controleur' => null, 'model' => 'DIndex','vue' => 'DIndexVue', 'js' => null,'bdd' => 'BDD' , 'visible' => true, 'active' => true),
     'EnvoiMail' => array('nom' => 'EnvoiMail','header'=> 'HeaderDelegue','controleur' => null,'model' => 'DEnvoiMail', 'vue' => 'DEnvoiMailVue', 'js' => null,'bdd' => 'BDD' , 'visible' => true, 'active' => true),

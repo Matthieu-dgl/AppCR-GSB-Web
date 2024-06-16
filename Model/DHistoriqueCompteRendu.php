@@ -17,7 +17,7 @@ try {
         $supprimeCR = $bdd->prepare($requeteSupprimeCR);
         $supprimeCR->execute();
 
-        header('Location: index.php?page=HistoriqueCompteRenduDelegue');
+        header('Location: Index.php?page=HistoriqueCompteRenduDelegue');
     }
 } catch (PDOException $e) {
     echo "Erreur de récupération dans la base de données : " . $e->getMessage();

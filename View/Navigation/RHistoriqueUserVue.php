@@ -24,10 +24,10 @@
             echo '<td class="tdU">' . $row['Email'] . '</td>';
             echo '<td class="tdU">' . $row['nomR'] . '</td>';
             echo '<td class="tdU">' . $row['Type'] . '</td>';
-            echo '<td class="tdU"><a class="ModifyProduit" href="index.php?page=ModifUser&Id_user=' . $row['Id_user'] . '">Modifier</a></td>';
+            echo '<td class="tdU"><a class="ModifyProduit" href="Index.php?page=ModifUser&Id_user=' . $row['Id_user'] . '">Modifier</a></td>';
             echo '</tr>';
         }
         ?>
     </table>
-
+<br>
 </div>

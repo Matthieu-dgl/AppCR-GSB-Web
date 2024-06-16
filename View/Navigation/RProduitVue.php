@@ -20,9 +20,10 @@
         echo '<td class="thP" >' . $row['dateDistribution'] . '</td>';
         echo '<td class="thP" >' . $row['quantite'] . '</td>';
         echo '<td class="thP" >' . $row['description'] . '</td>';
-        echo '<td class="thP" ><a class="ModifyProduit" href="index.php?page=ModifProduit&id_echantillon=' . $row['id_echantillon'] . '">Modifier</a></td>';
+        echo '<td class="thP" ><a class="ModifyProduit" href="Index.php?page=ModifProduit&id_echantillon=' . $row['id_echantillon'] . '">Modifier</a></td>';
         echo '</tr>';
     }
     ?>
 </table>
+    <br>
 </div>

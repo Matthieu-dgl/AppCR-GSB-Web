@@ -24,6 +24,7 @@
     width: 20vw;
     border: 1px solid #052550;
     background-color: #EDE8E4;
+    padding-left: 1vw;
 }
 
 #FormCR input:read-write {
@@ -38,6 +39,7 @@
     appearance: none;
     border-radius: 0;
     cursor: pointer;
+    padding-left: 1vw;
 }
 
 #FormCR option {

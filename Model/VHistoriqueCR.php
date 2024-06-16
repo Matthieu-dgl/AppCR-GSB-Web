@@ -23,7 +23,7 @@
             $supprimeCR = $bdd->prepare($requeteSupprimeCR);
             $supprimeCR->execute();
 
-            header('Location: index.php?page=HistoriqueCompteRendu');
+            header('Location: Index.php?page=HistoriqueCompteRendu');
         }
 
     } catch (PDOException $e) {

@@ -19,9 +19,9 @@
             }
             ?>
             <?php
-                foreach ($RegionAll as $gd) {
+            foreach ($RegionAll as $gd) {
                 echo "<option value='{$gd['id_region']}'>{$gd['RNom']}</option>";
-                }
+            }
             ?>
         </select><br><br><br>
 

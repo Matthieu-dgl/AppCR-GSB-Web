@@ -4,7 +4,8 @@ header("Content-Type:application/json");
 
 try {
     $password = "Fabzummogxe3";
-    $bdd = new PDO('mysql:host=manonca421.mysql.db;dbname=manonca421;charset=utf8;', 'manonca421', $password, array(PDO::ATTR_PERSISTENT => true));    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $bdd = new PDO('mysql:host=manonca421.mysql.db;dbname=manonca421;charset=utf8;', 'manonca421', $password, array(PDO::ATTR_PERSISTENT => true));
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $id = $_POST["id"];
 
@@ -15,7 +16,8 @@ try {
             JOIN user U ON CR.id_visiteur = U.Id_user 
             LEFT JOIN Echantillon E1 ON CR.id_echantillon_1 = E1.id_echantillon 
             LEFT JOIN Echantillon E2 ON CR.id_echantillon_2 = E2.id_echantillon
-            WHERE U.Id_user = :id");
+            WHERE U.Id_user = :id
+            ORDER BY date DESC");
     $getCompteRendu->execute(['id' => $id]);
     $cr = $getCompteRendu->fetchAll(PDO::FETCH_ASSOC);
 
@@ -24,8 +26,13 @@ try {
         echo json_encode(array("status" => 400, 'message' => "Il n'existe pas de compte rendu"));
         die();
     } else {
-        echo json_encode(['compteRendu' => $cr]);
-        echo json_encode(array("status" => 200, 'message' => "Récupération des comptes rendus réussie !"));
+        $response = array(
+            'compteRendu' => $cr,
+            'status' => 200,
+            'message' => "Récupération des comptes rendus réussie !"
+        );
+
+        echo json_encode($response);
     }
 } catch (PDOException $e) {
     die($e);
@@ -34,3 +41,4 @@ try {
 $bdd = null;
 
 ?>
+ 

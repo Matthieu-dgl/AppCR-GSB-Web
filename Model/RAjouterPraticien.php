@@ -31,12 +31,12 @@ if (isset($_POST['boutton'])) {
             $insertPraticien->execute(array($nom, $prenom, $specialité, $idCabinetInsere, $description));
 
             echo "<script> alert('Inscription réussie !') </script>";
-            header('Location: index.php?page=AjouterPraticien');
+            header('Location: Index.php?page=AjouterPraticien');
         } else {
             $insertPraticien = $bdd->prepare('INSERT INTO Praticien (Nom, Prenom, specialité, id_cabinet, description) VALUES (?, ?, ?, (SELECT id_cabinet FROM Cabinet WHERE nom=?), ?)');
             $insertPraticien->execute(array($nom, $prenom, $specialité, $NomCabinetInput, $description));
             echo "<script> alert('Inscription réussie !') </script>";
-            header('Location: index.php?page=AjouterPraticien');
+            header('Location: Index.php?page=AjouterPraticien');
         }
     } else {
         echo "<script> alert('Veuillez remplir tous les champs.') </script>";

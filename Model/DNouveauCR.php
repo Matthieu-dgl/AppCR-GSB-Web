@@ -32,7 +32,7 @@ if(isset($_POST['button'])){
 
 
         echo "<script> alert('Demande envoyé !') </script>";
-        header('Location: index.php?page=HistoriqueCompteRenduDelegue');
+        header('Location: Index.php?page=HistoriqueCompteRenduDelegue');
     } catch (PDOException $e) {
         echo "Erreur d'insertion dans la base de données : " . $e->getMessage();
     }

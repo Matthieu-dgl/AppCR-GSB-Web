@@ -10,7 +10,7 @@
                     <div class='traitV'></div>
                     <h3 class='commentaireCR'>{$row['bilan']}</h3>
                     <form method='post'>
-                        <a class='BtnModifier' href='index.php?page=ModifCRDelegue&id_compteRendu={$row['id_compteRendu']}'>Modifier</a>
+                        <a class='BtnModifier' href='Index.php?page=ModifCRDelegue&id_compteRendu={$row['id_compteRendu']}'>Modifier</a>
                         <input type='hidden' name='idCR' value='{$row['id_compteRendu']}'>
                         <button class='BtnSupprimer' name='supprimer'>Supprimer</button>
                     </form>

@@ -25,22 +25,9 @@ $stmt->execute();
 $visiteur = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
-
-$mois = isset($_POST['mois']) ? $_POST['mois'] : "01";
-$nombreCRQuery = "SELECT COUNT(id_compteRendu) AS count, MONTH(date) AS month FROM CompteRendu WHERE MONTH(date) = :mois AND id_region = :id_region";
-$nombreCR = $bdd->prepare($nombreCRQuery);
-$nombreCR->execute(array(':mois' => $mois, ':id_region' => $_SESSION['Region']));
-$data2 = $nombreCR->fetchAll(PDO::FETCH_ASSOC);
-
-if(isset($_POST['buttonStat'])) {
-    $mois = $_POST['mois'];
-    $natureCR = $_POST['natureCR'];
-
-    $nombreCRQuery = "SELECT COUNT(id_compteRendu) AS count, MONTH(date) AS month FROM CompteRendu WHERE MONTH(date) = :mois AND id_region = :id_region";
-    $nombreCR = $bdd->prepare($nombreCRQuery);
-    $nombreCR->execute(array(':mois' => $mois, ':id_region' => $_SESSION['Region']));
-    $data2 = $nombreCR->fetchAll(PDO::FETCH_ASSOC);
-}
+$nombreCRQuery = "SELECT COUNT(id_compteRendu) AS count FROM CompteRendu WHERE date >= DATE_SUB(CURDATE(), INTERVAL 1 MONTH)";
+$nombreCRStmt = $bdd->query($nombreCRQuery);
+$data2 = $nombreCRStmt->fetchAll(PDO::FETCH_ASSOC);
 
 $requeteEchantillon = $bdd->prepare("SELECT * FROM Echantillon");
 $requeteEchantillon->execute();
@@ -70,9 +57,4 @@ if (isset($_POST['button'])) {
         $data[] = $row['nb_compteRendu'];
     }
 }
-
-$deleteCRQuery = "DELETE FROM CompteRendu WHERE date < DATE_SUB(NOW(), INTERVAL 6 MONTH)";
-$deleteCR = $bdd->prepare($deleteCRQuery);
-$deleteCR->execute();
-
 ?>
